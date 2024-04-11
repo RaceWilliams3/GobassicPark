@@ -7,14 +7,9 @@ public class Web : MonoBehaviour
 {
 
     public string externalDomain = "https://mysim421web.000webhostapp.com/";
+    public ScenarioController sC;
     // Start is called before the first frame update
     void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
     {
         
     }
@@ -42,6 +37,49 @@ public class Web : MonoBehaviour
         else
         {
             Debug.Log(www.downloadHandler.text);
+        }
+    }
+
+    public IEnumerator GetScenario(string scenarioID, System.Action<string> callback)
+    {
+        WWWForm form = new WWWForm();
+        form.AddField("scenarioID", scenarioID);
+
+        using (UnityWebRequest www = UnityWebRequest.Post("https://mysim421web.000webhostapp.com/GetScenario.php", form))
+        {
+            yield return www.SendWebRequest();
+
+            if (www.result == UnityWebRequest.Result.ConnectionError)
+            {
+                Debug.Log(www.error);
+            }
+            else
+            {
+                Debug.Log(www.downloadHandler.text);
+                string jsonArray = www.downloadHandler.text;
+
+                callback(jsonArray);
+            }
+        }
+    }
+
+    public IEnumerator GetInfo()
+    {
+        using (UnityWebRequest www = UnityWebRequest.Get("https://mysim421web.000webhostapp.com/GetInfo.php"))
+        {
+            yield return www.SendWebRequest();
+
+            if (www.result == UnityWebRequest.Result.ConnectionError)
+            {
+                Debug.Log(www.error);
+            }
+            else
+            {
+                Debug.Log(www.downloadHandler.text);
+
+                sC.thingy = www.downloadHandler.text;
+                byte[] results = www.downloadHandler.data;
+            }
         }
     }
 }
