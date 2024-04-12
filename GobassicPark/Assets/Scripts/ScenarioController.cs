@@ -118,6 +118,7 @@ public class ScenarioController : MonoBehaviour
     public void TestGetInfo()
     {
         StartCoroutine(Main.Instance.web.GetInfo());
+        StartCoroutine(Main.Instance.web.GetScenarioRow(1));
     }
 
 

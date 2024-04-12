@@ -82,4 +82,25 @@ public class Web : MonoBehaviour
             }
         }
     }
+
+    public IEnumerator GetScenarioRow(int id)
+    {
+        WWWForm form = new WWWForm();
+        form.AddField("scenarioID", id);
+        using (UnityWebRequest www = UnityWebRequest.Get("https://mysim421web.000webhostapp.com/GetScenarioRow.php"))
+        {
+            yield return www.SendWebRequest();
+
+            if (www.result == UnityWebRequest.Result.ConnectionError)
+            {
+                Debug.Log(www.error);
+            }
+            else
+            {
+                Debug.Log(www.downloadHandler.text);
+
+                byte[] results = www.downloadHandler.data;
+            }
+        }
+    }
 }
