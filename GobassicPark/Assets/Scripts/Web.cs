@@ -87,7 +87,7 @@ public class Web : MonoBehaviour
     {
         WWWForm form = new WWWForm();
         form.AddField("scenarioID", id);
-        using (UnityWebRequest www = UnityWebRequest.Get("https://mysim421web.000webhostapp.com/GetScenarioRow.php"))
+        using (UnityWebRequest www = UnityWebRequest.Post("https://mysim421web.000webhostapp.com/GetScenarioRow.php", form))
         {
             yield return www.SendWebRequest();
 
@@ -97,9 +97,7 @@ public class Web : MonoBehaviour
             }
             else
             {
-                Debug.Log(www.downloadHandler.text);
-
-                byte[] results = www.downloadHandler.data;
+                sC.UnpackJsonArray(www.downloadHandler.text);
             }
         }
     }

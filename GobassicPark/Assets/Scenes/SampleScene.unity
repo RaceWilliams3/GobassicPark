@@ -7212,7 +7212,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2072279139}
         m_TargetAssemblyTypeName: ScenarioController, Assembly-CSharp
-        m_MethodName: OnViewScenarioButtonPressed
+        m_MethodName: TestGetInfo
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7871,15 +7871,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4394e5df92088448b4874addb2b731b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scenarioName: {fileID: 837661537}
-  predStartCount: {fileID: 1769730001}
-  preyStartCount: {fileID: 1410129392}
-  foodStartAmount: {fileID: 1375386310}
-  overallHungerRate: {fileID: 1728205137}
-  foodGenRate: {fileID: 2128110164}
-  predatorType: {fileID: 1002948237}
-  preyType: {fileID: 922757588}
   idInput: {fileID: 1587132429}
+  thingy: 
+  viewText: {fileID: 1010521524}
 --- !u!1 &2111563049
 GameObject:
   m_ObjectHideFlags: 0
