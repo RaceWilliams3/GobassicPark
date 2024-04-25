@@ -89,21 +89,25 @@ public class ScenarioController : MonoBehaviour
         {
             print("predator created");
             var position = new Vector3(UnityEngine.Random.Range(-18, 18), 1, UnityEngine.Random.Range(-18, 18));
-            Instantiate(predator, position, Quaternion.identity);
+            GameObject predatorBase = Instantiate(predator, position, Quaternion.identity);
+            predatorBase.GetComponent<predatorController>().hungerRate = hungerRate;
         }
 
         for (int i = 1; i <= preyNumber; i++)
         {
             print("prey created");
             var position = new Vector3(UnityEngine.Random.Range(-18, 18), 1, UnityEngine.Random.Range(-18, 18));
-            Instantiate(prey, position, Quaternion.identity);
+            GameObject preyBase = Instantiate(prey, position, Quaternion.identity);
+            preyBase.GetComponent<preyController>().hungerRate = hungerRate;
+
         }
 
         for (int i = 1; i <= foodAmount; i++)
         {
             print("food created");
             var position = new Vector3(UnityEngine.Random.Range(-18, 18), 1, UnityEngine.Random.Range(-18, 18));
-            Instantiate(food, position, Quaternion.identity);
+            GameObject foodBase = Instantiate(food, position, Quaternion.identity);
+            foodBase.GetComponent<foodController>().growthRate = foodGen;
         }
 
     }

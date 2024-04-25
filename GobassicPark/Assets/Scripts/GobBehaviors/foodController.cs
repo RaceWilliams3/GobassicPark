@@ -5,16 +5,16 @@ using UnityEngine;
 
 public class foodController : MonoBehaviour
 {
-    public float growthRate;
+    public int growthRate;
     private IEnumerator coroutine;
 
     public void Start()
     {
-        growthRate = 10.0f;
+        print(growthRate + "Rate");
         coroutine = growTime(growthRate);
         StartCoroutine(coroutine);
     }
-    private IEnumerator growTime(float growTime)
+    private IEnumerator growTime(int growTime)
     {
         while (true)
         {
