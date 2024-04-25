@@ -1094,7 +1094,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 4, y: 1, z: 4}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -3893,7 +3893,7 @@ Transform:
   m_GameObject: {fileID: 963194225}
   serializedVersion: 2
   m_LocalRotation: {x: 0.20210436, y: -0, z: -0, w: 0.97936404}
-  m_LocalPosition: {x: 0, y: 7.5, z: -15.84}
+  m_LocalPosition: {x: 0, y: 13.95, z: -32.41}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8299,6 +8299,9 @@ MonoBehaviour:
     PredatorType: 0
     PreyType: 0
   viewText: {fileID: 1010521524}
+  predator: {fileID: 7912969180564475080, guid: 340fb332acd39e8479a8891df809bb83, type: 3}
+  prey: {fileID: 4681918116734509203, guid: 218db834331664f4cbc04c6e034b877a, type: 3}
+  food: {fileID: 1878179440068684116, guid: 3becb64404a45b342a78924acaceaedb, type: 3}
 --- !u!1 &2111563049
 GameObject:
   m_ObjectHideFlags: 0

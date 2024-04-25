@@ -25,6 +25,10 @@ public class ScenarioController : MonoBehaviour
     public Scenario selectedScenario;
     public TMP_Text viewText;
 
+    public GameObject predator;
+    public GameObject prey;
+    public GameObject food;
+
     public void OnViewScenarioButtonPressed()
     {
 
@@ -81,19 +85,25 @@ public class ScenarioController : MonoBehaviour
         print(predNumber + " Predators spawned");
         print(preyNumber + " Prey spawned");
 
-        for(int i = 1; i<= predNumber; i++)
+        for (int i = 1; i<= predNumber; i++)
         {
             print("predator created");
+            var position = new Vector3(UnityEngine.Random.Range(-18, 18), 1, UnityEngine.Random.Range(-18, 18));
+            Instantiate(predator, position, Quaternion.identity);
         }
 
         for (int i = 1; i <= preyNumber; i++)
         {
             print("prey created");
+            var position = new Vector3(UnityEngine.Random.Range(-18, 18), 1, UnityEngine.Random.Range(-18, 18));
+            Instantiate(prey, position, Quaternion.identity);
         }
 
         for (int i = 1; i <= foodAmount; i++)
         {
             print("food created");
+            var position = new Vector3(UnityEngine.Random.Range(-18, 18), 1, UnityEngine.Random.Range(-18, 18));
+            Instantiate(food, position, Quaternion.identity);
         }
 
     }
