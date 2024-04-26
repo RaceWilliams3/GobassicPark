@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1958679025175055744}
   - component: {fileID: 6548831952026257541}
   - component: {fileID: 8935640629909809794}
-  - component: {fileID: 6793014780808451392}
+  - component: {fileID: 8814927750621911679}
   - component: {fileID: -7634233298474481692}
   m_Layer: 0
   m_Name: Predator
@@ -118,7 +118,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 3.5
+  m_Speed: 8
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -130,7 +130,7 @@ NavMeshAgent:
   m_BaseOffset: 0.5
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!114 &6793014780808451392
+--- !u!114 &8814927750621911679
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -139,10 +139,22 @@ MonoBehaviour:
   m_GameObject: {fileID: 7912969180564475080}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: faeb041afa611454b89dab5132db0014, type: 3}
+  m_Script: {fileID: 11500000, guid: 7260010e8bfb14643b1434beb5111ed2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  active: 1
+  busy: 0
+  hunger: 0
+  mate: 0
+  canMate: 0
   hungerRate: 0
+  matingRate: 0
+  tickRate: 2
+  huntTimeOut: 15
+  agent: {fileID: 8935640629909809794}
+  foodType: prey
+  hunted: 0
+  createWhenMating: {fileID: 7912969180564475080}
 --- !u!54 &-7634233298474481692
 Rigidbody:
   m_ObjectHideFlags: 0

@@ -13,11 +13,11 @@ GameObject:
   - component: {fileID: 3736562079513442678}
   - component: {fileID: 8796082074169639805}
   - component: {fileID: 938738189999463271}
-  - component: {fileID: 5708259252113332203}
   - component: {fileID: -4022536785878535708}
+  - component: {fileID: 6334337260233885364}
   m_Layer: 0
   m_Name: Prey
-  m_TagString: Untagged
+  m_TagString: prey
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -118,7 +118,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 3.5
+  m_Speed: 5
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -130,19 +130,6 @@ NavMeshAgent:
   m_BaseOffset: 0.5
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!114 &5708259252113332203
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4681918116734509203}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1b2bf50659c9f3c4ba29d6d65c99289c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hungerRate: 0
 --- !u!54 &-4022536785878535708
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -170,3 +157,28 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &6334337260233885364
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4681918116734509203}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7260010e8bfb14643b1434beb5111ed2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  active: 1
+  busy: 0
+  hunger: 0
+  mate: 0
+  canMate: 0
+  hungerRate: 10
+  matingRate: 0
+  tickRate: 2
+  huntTimeOut: 10
+  agent: {fileID: 938738189999463271}
+  foodType: food
+  hunted: 0
+  createWhenMating: {fileID: 4681918116734509203}

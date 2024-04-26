@@ -90,7 +90,7 @@ public class ScenarioController : MonoBehaviour
             print("predator created");
             var position = new Vector3(UnityEngine.Random.Range(-18, 18), 1, UnityEngine.Random.Range(-18, 18));
             GameObject predatorBase = Instantiate(predator, position, Quaternion.identity);
-            predatorBase.GetComponent<predatorController>().hungerRate = hungerRate;
+            predatorBase.GetComponent<GOB>().hungerRate = hungerRate;
         }
 
         for (int i = 1; i <= preyNumber; i++)
@@ -98,7 +98,7 @@ public class ScenarioController : MonoBehaviour
             print("prey created");
             var position = new Vector3(UnityEngine.Random.Range(-18, 18), 1, UnityEngine.Random.Range(-18, 18));
             GameObject preyBase = Instantiate(prey, position, Quaternion.identity);
-            preyBase.GetComponent<preyController>().hungerRate = hungerRate;
+            preyBase.GetComponent<GOB>().hungerRate = hungerRate;
 
         }
 
