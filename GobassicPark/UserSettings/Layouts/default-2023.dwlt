@@ -323,7 +323,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets
+    - Assets/Prefabs
     m_Globs: []
     m_ProductIds: 
     m_AnyWithAssetOrigin: 0
@@ -333,16 +333,16 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets
+  - Assets/Prefabs
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\zacsz\OneDrive\Desktop\Projects\Gobassic Park\GobassicPark\GobassicPark
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 28.600037}
-    m_SelectedIDs: 4e5f0000
-    m_LastClickedID: 24398
-    m_ExpandedIDs: 000000004e5f00005e5f000000ca9a3b
+    m_SelectedIDs: a65f0000
+    m_LastClickedID: 24486
+    m_ExpandedIDs: 000000009a5f000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -370,7 +370,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000004e5f0000
+    m_ExpandedIDs: 000000009a5f0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -516,7 +516,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: ac01feff7002feffc609feff7e0afeff24fbffffca5c00006c5d00001e5e0000
+      m_ExpandedIDs: fafaffffb85c0000ea5c00000a5d0000785d00008c5d00003e5e0000725e00009c5e0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -988,11 +988,11 @@ MonoBehaviour:
   m_Rotation:
     m_Target: {x: 0.29757315, y: 0.30175865, z: -0.09970454, w: 0.90028024}
     speed: 2
-    m_Value: {x: 0.29621446, y: 0.30189976, z: -0.09924909, w: 0.90070146}
+    m_Value: {x: 0.2975652, y: 0.3017506, z: -0.09970188, w: 0.9002562}
   m_Size:
-    m_Target: 25.352436
+    m_Target: 11.068286
     speed: 2
-    m_Value: 26.547052
+    m_Value: 11.068286
   m_Ortho:
     m_Target: 0
     speed: 2
