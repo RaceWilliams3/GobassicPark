@@ -170,8 +170,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.02317828, y: 0.043165363, z: 0.08846604}
-  m_Center: {x: 0.000049821803, y: 0.020724215, z: -0.0117368875}
+  m_Size: {x: 0.02317828, y: 0.041195005, z: 0.08846604}
+  m_Center: {x: 0.000049822094, y: 0.021709397, z: -0.0117368875}
 --- !u!114 &4774404811978706001
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -196,6 +196,6 @@ MonoBehaviour:
   agent: {fileID: 1329754219421064123}
   foodType: food
   hunted: 0
-  createWhenMating: {fileID: 1878179440068684116, guid: 3becb64404a45b342a78924acaceaedb, type: 3}
+  createWhenMating: {fileID: 2269857633525436298}
   isPred: 0
   cS: {fileID: 0}

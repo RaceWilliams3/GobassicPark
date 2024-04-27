@@ -114,20 +114,12 @@ public class GOB : MonoBehaviour
     private void setDestination(Vector3 destination)
     {
         Vector3 agentPosition = transform.position;
-        NavMeshHit hit;
-
-        if (NavMesh.SamplePosition(agentPosition, out hit, 3, NavMesh.AllAreas))
+        var path = new NavMeshPath();
+        if (agent.CalculatePath(destination, path) == true)
         {
-            // Check if the positions are vertically aligned
-            if (Mathf.Approximately(agentPosition.x, hit.position.x)
-                && Mathf.Approximately(agentPosition.z, hit.position.z))
-            {
-                // Lastly, check if object is below navmesh
-                if (agentPosition.y >= hit.position.y)
-                {
-                    agent.SetDestination(destination);
-                }
-            }
+
+            agent.SetDestination(destination);
+
         }
     }
 
