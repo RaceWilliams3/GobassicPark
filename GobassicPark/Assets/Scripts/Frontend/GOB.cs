@@ -152,11 +152,11 @@ public class GOB : MonoBehaviour
             Instantiate(createWhenMating, transform.position, Quaternion.identity);
             if (isPred)
             {
-                cS.UpdatePred(-1);
+                cS.UpdatePred(1);
             }
             else if (!isPred)
             {
-                cS.UpdatePrey(-1);
+                cS.UpdatePrey(1);
             }
         }
 
