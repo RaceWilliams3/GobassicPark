@@ -30,11 +30,14 @@ public class GOB : MonoBehaviour
     public bool hunted = false;
 
     public GameObject createWhenMating;
+    public bool isPred;
+    public CountScript cS;
     
 
     void Start()
     {
         hunger += Random.Range(0f, 30f);
+        cS = FindFirstObjectByType<CountScript>();
     }
 
 
@@ -50,6 +53,13 @@ public class GOB : MonoBehaviour
         //Check if starving
         if (hunger > 100f)
         {
+            if (isPred)
+            {
+                cS.UpdatePred(-1);
+            } else if (!isPred)
+            {
+                cS.UpdatePrey(-1);
+            }
             Destroy(gameObject);
         }
 
@@ -140,6 +150,14 @@ public class GOB : MonoBehaviour
             hunger += 30;
             busy = false;
             Instantiate(createWhenMating, transform.position, Quaternion.identity);
+            if (isPred)
+            {
+                cS.UpdatePred(-1);
+            }
+            else if (!isPred)
+            {
+                cS.UpdatePrey(-1);
+            }
         }
 
     }

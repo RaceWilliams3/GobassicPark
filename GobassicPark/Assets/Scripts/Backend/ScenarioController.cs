@@ -24,6 +24,7 @@ public class ScenarioController : MonoBehaviour
     public string thingy;
     public Scenario selectedScenario;
     public TMP_Text viewText;
+    public CountScript cS;
 
     public GameObject predator;
     public GameObject prey;
@@ -31,8 +32,6 @@ public class ScenarioController : MonoBehaviour
 
     public void OnViewScenarioButtonPressed()
     {
-
-
         StartCoroutine(Main.Instance.web.GetInfo());
 
         if (idInput.text == null)
@@ -71,6 +70,7 @@ public class ScenarioController : MonoBehaviour
 
     public void startScenario()
     {
+        cS.gameObject.SetActive(true);
         SceneContainer.SetActive(false);
         predStartCountInput = Int32.Parse(selectedScenario.PredatorStartCount.ToString());
         preyStartCountInput = Int32.Parse(selectedScenario.PreyStartCount.ToString());
@@ -84,6 +84,10 @@ public class ScenarioController : MonoBehaviour
     {
         print(predNumber + " Predators spawned");
         print(preyNumber + " Prey spawned");
+
+        cS.UpdatePred(predNumber);
+        cS.UpdatePrey(preyNumber);
+        cS.UpdateTree(foodAmount);
 
         for (int i = 1; i<= predNumber; i++)
         {
