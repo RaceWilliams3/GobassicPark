@@ -141,6 +141,14 @@ public class GOB : MonoBehaviour
         if(collision.gameObject.CompareTag(foodType))
         {
             Destroy(collision.gameObject);
+            if (isPred)
+            {
+                cS.UpdatePrey(-1);
+            }
+            else if (!isPred)
+            {
+                cS.UpdateTree(-1);
+            }
             hunger = 0f;
             busy = false;
         }
