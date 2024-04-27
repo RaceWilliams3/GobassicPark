@@ -8993,8 +8993,8 @@ MonoBehaviour:
     PreyType: 0
   viewText: {fileID: 1010521524}
   cS: {fileID: 1119494804}
-  predator: {fileID: 7912969180564475080, guid: 340fb332acd39e8479a8891df809bb83, type: 3}
-  prey: {fileID: 4681918116734509203, guid: 218db834331664f4cbc04c6e034b877a, type: 3}
+  predator: {fileID: 17111775016596915, guid: b9ca0d39fd6bfac44bc24fbd530c32dc, type: 3}
+  prey: {fileID: 2269857633525436298, guid: 0df07650ce3e3434c9fd30d34f5b78c6, type: 3}
   food: {fileID: 1878179440068684116, guid: 3becb64404a45b342a78924acaceaedb, type: 3}
 --- !u!1 &2111563049
 GameObject:

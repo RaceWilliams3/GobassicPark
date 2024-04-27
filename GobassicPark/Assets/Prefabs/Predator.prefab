@@ -155,6 +155,8 @@ MonoBehaviour:
   foodType: prey
   hunted: 0
   createWhenMating: {fileID: 7912969180564475080}
+  isPred: 0
+  cS: {fileID: 0}
 --- !u!54 &-7634233298474481692
 Rigidbody:
   m_ObjectHideFlags: 0
