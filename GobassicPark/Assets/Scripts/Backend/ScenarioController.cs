@@ -109,7 +109,7 @@ public class ScenarioController : MonoBehaviour
         for (int i = 1; i <= foodAmount; i++)
         {
             print("food created");
-            var position = new Vector3(UnityEngine.Random.Range(-18, 18), 1, UnityEngine.Random.Range(-18, 18));
+            var position = new Vector3(UnityEngine.Random.Range(-18, 18), 0, UnityEngine.Random.Range(-18, 18));
             GameObject foodBase = Instantiate(food, position, Quaternion.identity);
             foodBase.GetComponent<foodController>().growthRate = foodGen;
         }
